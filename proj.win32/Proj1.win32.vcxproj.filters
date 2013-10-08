@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{c2f9dc94-5698-48e3-b21b-ea9c9814863a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{e3d8570a-398d-4bc1-afd2-cb1c93065053}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{f1c5bce2-ed8c-4f06-9a45-1fb6565b3788}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;png;manifest</Extensions>
+    </Filter>
+    <Filter Include="source\Start">
+      <UniqueIdentifier>{98e2e3e4-44aa-418a-8066-fdbd4ee1ef04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Advance">
+      <UniqueIdentifier>{6bce1c96-4df8-4480-8dae-b1736e6b01d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Common">
+      <UniqueIdentifier>{2ba83b2c-0771-49d9-8491-48e05ea9ceeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Basic">
+      <UniqueIdentifier>{5e821afe-9f15-43ab-a11c-303c9eb33c0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Basic\sqlite">
+      <UniqueIdentifier>{f1d4a8d6-c9b0-440c-97db-2cc4b59c0089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Battle">
+      <UniqueIdentifier>{1c000e09-8fe3-486d-80ad-2633f379e232}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Proj1.ico">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseSelected.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\CloseNormal.png">
+      <Filter>resource</Filter>
+    </None>
+    <None Include="..\Resources\HelloWorld.png">
+      <Filter>resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Proj1.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Start\StartScene.h">
+      <Filter>source\Start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Advance\AdvanceScene.h">
+      <Filter>source\Advance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\MyPageView.h">
+      <Filter>source\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\DataManager.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\Sqlite\sqlite3.h">
+      <Filter>Basic\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\Sqlite\sqlite3ext.h">
+      <Filter>Basic\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\GameDataType.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Advance\StageLayer.h">
+      <Filter>source\Advance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\GameDefine.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Battle\BattleScene.h">
+      <Filter>source\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\Controller.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Battle\BattleMonster.h">
+      <Filter>source\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Battle\BattleMenu.h">
+      <Filter>source\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Battle\CountDownLayer.h">
+      <Filter>source\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\Sqlite\CppSQLite3.h">
+      <Filter>Basic\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Basic\Converter.h">
+      <Filter>Basic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Start\StartScene.cpp">
+      <Filter>source\Start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Advance\AdvanceScene.cpp">
+      <Filter>source\Advance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Common\MyPageView.cpp">
+      <Filter>source\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\DataManager.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\Sqlite\shell.c">
+      <Filter>Basic\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\Sqlite\sqlite3.c">
+      <Filter>Basic\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Advance\StageLayer.cpp">
+      <Filter>source\Advance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Battle\BattleScene.cpp">
+      <Filter>source\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\Controller.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Battle\BattleMonster.cpp">
+      <Filter>source\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Battle\BattleMenu.cpp">
+      <Filter>source\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Battle\CountDownLayer.cpp">
+      <Filter>source\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\Sqlite\CppSQLite3.cpp">
+      <Filter>Basic\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Basic\Converter.cpp">
+      <Filter>Basic</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
