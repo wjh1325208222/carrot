@@ -1,0 +1,36 @@
+﻿生成启动时间为 2013/8/15 23:34:11。
+     1>项目“D:\cocos2d-x\MyProject\Proj130807\proj.win32\Proj1.win32.vcxproj”在节点 2 上(build 个目标)。
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output 目录未以斜杠结尾。此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+     1>InitializeBuildStatus:
+         正在创建“Debug.win32\Proj1.win32.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx" /I. /I..\Classes /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx\include" /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx\kazmath\include" /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx\platform\win32" /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx\platform\third_party\win32" /I"D:\cocos2d-x\MyProject\Proj130807\cocos2dx\platform\third_party\win32\OGLES" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D STRICT /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS_DEBUG /D COCOS2D_DEBUG=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\AppDelegate.cpp ..\Classes\HelloWorldScene.cpp main.cpp
+         正在跳过...(未检测到相关更改)
+         main.cpp
+         HelloWorldScene.cpp
+         AppDelegate.cpp
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         d:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\cocos2d-x\MyProject\Proj130807\Env\Proj1.win32.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\cocos2d-x\MyProject\Proj130807\Library" /LIBPATH:"D:\cocos2d-x\MyProject\Proj130807\Env\\" libcocos2d.lib opengl32.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug.win32\Proj1.win32.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\cocos2d-x\MyProject\Proj130807\Env\Proj1.win32.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\cocos2d-x\MyProject\Proj130807\Env\Proj1.win32.lib" /MACHINE:X86 Debug.win32\Proj1.res
+         Debug.win32\Proj1.win32.exe.embed.manifest.res
+         Debug.win32\AppDelegate.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\main.obj
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug.win32\Proj1.win32.exe.embed.manifest" /manifest Debug.win32\Proj1.win32.exe.intermediate.manifest
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         Proj1.win32.vcxproj -> D:\cocos2d-x\MyProject\Proj130807\Env\Proj1.win32.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug.win32\Proj1.win32.unsuccessfulbuild”。
+         正在对“Debug.win32\Proj1.win32.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\cocos2d-x\MyProject\Proj130807\proj.win32\Proj1.win32.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.18
