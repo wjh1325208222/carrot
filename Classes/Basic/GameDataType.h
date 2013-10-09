@@ -69,6 +69,10 @@ typedef struct
 	int height;		//物件高度,格子大小
 	int action;		//是否有动作，0无 1 上下移动 2左右移动
 	int data1;		//移动偏移量
+	int lifeMax;	//最大生命值
+
+	//物件游戏过程中数据
+	int life;		//物件生命，当为0时，消除该物件
 }TPL_MAP_OBJ;
 
 //用户相关数据

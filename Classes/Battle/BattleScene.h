@@ -36,10 +36,18 @@ protected:
 
 	void ShowArrow(int idMap);
 
+	//弹出点击区域不可放置错误
+	void ShowTouchPlaceErr(CCPoint ptTouch);
+
+	//显示炮塔菜单
+	void ShowTowerMenu(CCPoint ptTouch);
+
 	virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
 	virtual void ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent);
+
+	void OnTouchClick(CCPoint pos);
 
 	CCTMXTiledMap* m_pMap;
 

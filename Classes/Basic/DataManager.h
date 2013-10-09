@@ -28,6 +28,8 @@ public:
 	const map<int, PATH_POINT>* getMapPath();
 	//通过路径名获取该路径详细信息
 	const PATH_POINT* GetPointByName(const char* szName);
+	//获取地图可放置格子
+	const map<string, MAP_CELL>* GetMapCellLs();
 
 
 	//查找

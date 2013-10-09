@@ -296,4 +296,9 @@ const MAP_CELL* CDataManager::findMapCell( string cellName )
 	return NULL;
 }
 
+const map<string, MAP_CELL>* CDataManager::GetMapCellLs()
+{
+	return &m_mapCell;
+}
+
 

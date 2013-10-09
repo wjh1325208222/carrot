@@ -146,6 +146,7 @@
     <ClInclude Include="..\Classes\Battle\BattleMonster.h" />
     <ClInclude Include="..\Classes\Battle\BattleScene.h" />
     <ClInclude Include="..\Classes\Battle\CountDownLayer.h" />
+    <ClInclude Include="..\Classes\Battle\TowerListLayer.h" />
     <ClInclude Include="..\Classes\Common\MyPageView.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\Start\StartScene.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="..\Classes\Battle\BattleMonster.cpp" />
     <ClCompile Include="..\Classes\Battle\BattleScene.cpp" />
     <ClCompile Include="..\Classes\Battle\CountDownLayer.cpp" />
+    <ClCompile Include="..\Classes\Battle\TowerListLayer.cpp" />
     <ClCompile Include="..\Classes\Common\MyPageView.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\Start\StartScene.cpp" />

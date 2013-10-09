@@ -112,6 +112,9 @@
     <ClInclude Include="..\Classes\Basic\Converter.h">
       <Filter>Basic</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\Battle\TowerListLayer.h">
+      <Filter>source\Battle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -164,6 +167,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Basic\Converter.cpp">
       <Filter>Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Battle\TowerListLayer.cpp">
+      <Filter>source\Battle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

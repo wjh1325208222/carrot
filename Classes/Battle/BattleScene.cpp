@@ -15,6 +15,7 @@ using namespace std;
 #define		kTagCountDownLight	1003
 #define		kTagCountDownNum	1004
 #define		kTagCarrotLife		1005
+#define		kTagTouchPlaceErr	1006	//点击位置不能放置物品错误提示图标
 
 #define		kTagMapObjStart		10000
 
@@ -266,6 +267,10 @@ void CBattleScene::EnterStage(int idStage)
 				pMapObj->runAction(pAction);
 			}
 		}
+
+		//所有物件初始生命值为100%
+		iterTemp->lifeMax = 100;//暂定100
+		iterTemp->life = iterTemp->lifeMax;
 		
 	}
 	ShowArrow(pMap->idMap);
@@ -289,7 +294,7 @@ void CBattleScene::onEnter()
 
 	ShowCountDownLayer();
 	
-	CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 10, true);
+	CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
 }
 
 void CBattleScene::onExit()
@@ -379,6 +384,7 @@ void CBattleScene::Start()
 
 bool CBattleScene::ccTouchBegan( CCTouch *pTouch, CCEvent *pEvent )
 {
+	OnTouchClick(CCDirector::sharedDirector()->convertToGL(pTouch->getLocationInView()));
 	return true;
 }
 
@@ -482,6 +488,79 @@ void CBattleScene::ShowArrow(int idMap)
 	}
 	
 	
+
+}
+
+void CBattleScene::OnTouchClick( CCPoint pos )
+{
+	//OpenGL pos
+	CCSize szWin = CCDirector::sharedDirector()->getWinSize();
+
+	const map<string, MAP_CELL>* pMapCellLs = CDataManager::sharedDataManager()->GetMapCellLs();
+	map<string, MAP_CELL>::const_iterator iterTemp;
+	for (iterTemp = pMapCellLs->begin(); iterTemp != pMapCellLs->end(); iterTemp++)
+	{
+		CCRect rcCell = CCRectMake(iterTemp->second.x, iterTemp->second.y, iterTemp->second.width, iterTemp->second.height);
+		if (rcCell.containsPoint(pos))
+		{
+			//点击到某个可放置物品区域
+
+			//1.查找该区域是否有物件
+			vector<TPL_MAP_OBJ>::iterator iterObj;
+			for (iterObj = m_vecMapObj.begin(); iterObj != m_vecMapObj.end(); iterObj++)
+			{
+				if (iterObj->pos == iterTemp->second.name)
+				{
+					if (iterObj->life > 0)
+					{
+						//该物件还存在
+						
+						//1.1 是否有炮塔，有炮塔则进行攻击
+
+						//1.2 没有炮塔，该区域不能点击
+						
+						ShowTouchPlaceErr(CCPointMake(pos.x, pos.y));
+						return;
+					}
+				}
+			}
+			//2.该区域无任何物件，显示炮塔菜单
+
+			return;
+		}
+	}
+	//3.属于不能放置物件位置
+	ShowTouchPlaceErr(CCPointMake(pos.x, pos.y));
+}
+
+void CBattleScene::ShowTouchPlaceErr( CCPoint ptTouch )
+{
+	CCPoint ptCenter;
+	ptCenter.x = abs(((int)ptTouch.x)/MAP_TILE_WIDHT)*MAP_TILE_WIDHT + MAP_TILE_WIDHT/2;
+	ptCenter.y = abs(((int)ptTouch.y)/MAP_TILE_HEIGHT)*MAP_TILE_HEIGHT + MAP_TILE_HEIGHT/2;
+
+	CCSprite* pErrSp = dynamic_cast<CCSprite*>(getChildByTag(kTagTouchPlaceErr));
+	if (!pErrSp)
+	{
+		CCSpriteFrameCache *pCache =  CCSpriteFrameCache::sharedSpriteFrameCache();
+		pCache->addSpriteFrame(CCSpriteFrame::create("forbidden.png",CCRectMake(0, 0, 54, 54)),"forbidden.png");
+
+		pErrSp = CCSprite::create();
+		pErrSp->initWithSpriteFrameName("forbidden.png");
+		addChild(pErrSp, 10, kTagTouchPlaceErr);
+	}
+	CCDirector::sharedDirector()->getActionManager()->removeAllActionsFromTarget(pErrSp);
+	
+	pErrSp->setPosition(ptCenter);
+	pErrSp->setOpacity(255);
+
+	CCActionInterval* pFadeOut = CCFadeOut::create(1.0f);
+	pErrSp->runAction(pFadeOut);
+
+}
+
+void CBattleScene::ShowTowerMenu( CCPoint ptTouch )
+{
 
 }
 
