@@ -6,7 +6,7 @@ CCScene* HelloWorld::scene()
 {
     CCScene * scene = NULL;
     do 
-    {
+    { 
         // 'scene' is an autorelease object
         scene = CCScene::create();
         CC_BREAK_IF(! scene);
